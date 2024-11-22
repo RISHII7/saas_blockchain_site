@@ -1,6 +1,7 @@
 ---
 import DefaultLayout from "../layouts/Default.astro";
 
+import { Footer } from "../sections/Footer";
 import { HeroSection } from "../sections/Hero";
 import { HeaderSection } from "../sections/Header";
 import { LatestPosts } from "../sections/LatestPosts";
@@ -27,4 +28,5 @@ const latestPosts = posts.sort((a, b) => {
   <LatestPosts latestPosts={latestPosts} />
   <TestimonialsSection />
   <CallToAction />
+  <Footer />
 </DefaultLayout>

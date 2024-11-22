@@ -5,8 +5,9 @@ import { HeroSection } from "../sections/Hero";
 import { HeaderSection } from "../sections/Header";
 import { LatestPosts } from "../sections/LatestPosts";
 import { FeaturesGrid } from "../sections/FeaturesGrid";
-import { TestimonialsSection } from "../sections/TestimonialsSection";
+import { CallToAction } from "../sections/CallToAction";
 import { FeaturesCards } from "../sections/FeaturesCards";
+import { TestimonialsSection } from "../sections/TestimonialsSection";
 
 import { getCollection } from "astro:content";
 
@@ -25,4 +26,5 @@ const latestPosts = posts.sort((a, b) => {
   <FeaturesGrid />
   <LatestPosts latestPosts={latestPosts} />
   <TestimonialsSection />
+  <CallToAction />
 </DefaultLayout>

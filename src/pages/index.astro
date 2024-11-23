@@ -5,8 +5,8 @@ import { Footer } from "../sections/Footer";
 import { HeroSection } from "../sections/Hero";
 import { HeaderSection } from "../sections/Header";
 import { LatestPosts } from "../sections/LatestPosts";
-import { FeaturesGrid } from "../sections/FeaturesGrid";
 import { CallToAction } from "../sections/CallToAction";
+import { FeaturesGrid } from "../sections/FeaturesGrid";
 import { FeaturesCards } from "../sections/FeaturesCards";
 import { TestimonialsSection } from "../sections/TestimonialsSection";
 
@@ -22,7 +22,7 @@ const latestPosts = posts.sort((a, b) => {
 
 <DefaultLayout>
   <HeaderSection />
-  <HeroSection />
+  <HeroSection client:load />
   <FeaturesCards />
   <FeaturesGrid />
   <LatestPosts latestPosts={latestPosts} />

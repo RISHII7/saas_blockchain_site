@@ -1,14 +1,10 @@
 ---
 import DefaultLayout from "../layouts/Default.astro";
 
-import { Footer } from "../sections/Footer";
 import { HeroSection } from "../sections/Hero";
-import { HeaderSection } from "../sections/Header";
 import { LatestPosts } from "../sections/LatestPosts";
-import { CallToAction } from "../sections/CallToAction";
 import { FeaturesGrid } from "../sections/FeaturesGrid";
 import { FeaturesCards } from "../sections/FeaturesCards";
-import { TestimonialsSection } from "../sections/TestimonialsSection";
 
 import { getCollection } from "astro:content";
 
@@ -21,12 +17,8 @@ const latestPosts = posts.sort((a, b) => {
 ---
 
 <DefaultLayout>
-  <HeaderSection client:load />
   <HeroSection client:load />
   <FeaturesCards client:load />
   <FeaturesGrid client:load />
   <LatestPosts latestPosts={latestPosts} client:load />
-  <TestimonialsSection client:load />
-  <CallToAction client:load />
-  <Footer />
 </DefaultLayout>
